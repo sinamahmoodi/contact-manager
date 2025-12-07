@@ -1,33 +1,23 @@
 import React from 'react'
+import SearchContact from './SearchContact';
+import {Purple, Background} from '../helpers/color'
 
  const Navbar = () => {
   return (
-    <nav className='navbar navbar-dark navbar-expand-sm shadow'>
+    <nav className='navbar navbar-dark navbar-expand-sm shadow-lg'
+         style={{backgroundColor:Background}}
+         dir='rtl'>
         <div className='container'>
             <div className='row w-100'>
                 <div className='col'>
-                    <i className='fas fa-id-badge'/>
-                    Manage app
-                    <span style={{ color : "purple" }}> Contact </span>
+                    <div className="navbar-barnd "  style={{ color : 'white' }}>
+                    <i className='fas fa-id-badge' style={{ color : Purple }} /> {" "}
+                    Manage app {" "}
+                    <span style={{ color : Purple }}> Contact </span>
+                </div>
                 </div>
                 <div className="col">
-                    <div className="input-group mx-2 w-75" dir='ltr'>
-                        <span 
-                        className='input-group-text'
-                        id='basic-addon1'
-                        style={{ backgroundColor : "purple"}}
-                        >
-                            <i className='fas fa-search '/>
-                        </span>
-                         <input 
-                         type="text"
-                         dir='rtl' 
-                         style={{backgroundColor:"gray" , borderColor:"purple"}}
-                         className='form-control'
-                         placeholder='Search Contacts'
-                         aria-label='Search'
-                         aria-describedby='basic-addon1'/>
-                    </div>
+                    <SearchContact/>
                 </div>
             </div>
         </div>

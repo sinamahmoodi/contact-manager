@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const App = () => {
   return (
-    <div className='App'>
+    <div className='App'>    
      <Navbar/>
     </div>
   )
